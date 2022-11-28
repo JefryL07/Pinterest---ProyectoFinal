@@ -38,5 +38,19 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+        <script>
+            var elem = document.querySelector('.grid-container');
+            var msnry = new Masonry( elem, {
+              // options
+              itemSelector: '.grid-item',
+              columnWidth: 230,
+              gutter: 20,
+              isFitWidth: true
+            });
+         </script>
     </body>
 </html>
