@@ -43,18 +43,17 @@ class Publicaciones(models.Model):
 
     class Meta:
         verbose_name_plural = 'publicaciones'
-        verbose_name = 'Publicacion'
+        verbose_name = 'publicacion'
         ordering = ["timestamp"]
 
 # Campos que deben ser llenados para las reviews
     timestamp = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=200, blank=True, null=True)
-    image = models.ImageField(blank=True, null=True, upload_to="blog")
+    image = models.ImageField(blank=True, null=True, upload_to="publicacion")
     name = models.CharField(max_length=200, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True, null=True)
     body = RichTextField(blank=True, null=True)
     slug = models.SlugField(null=True, blank=True)
-    
     is_active = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
@@ -66,4 +65,4 @@ class Publicaciones(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return f"/Publicacion/{self.slug}"
+        return f"/publicacion/{self.slug}"
