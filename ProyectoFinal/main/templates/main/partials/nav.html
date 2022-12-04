@@ -2,19 +2,33 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/navbar-logo.svg' %}" alt="..." /></a>
+        <a class="navbar-brand" href="{%url 'main:home'%}"><img src="{% static 'assets/img/navbar-logo.svg' %}" alt="..." /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#services">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="{%url 'main:home'%}">Inicio</a></li>
+                    <li class="dropdown">
+                        <div class="select">
+                        <span class="selected">Categorias</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>Animales</1i>
+                        <li>Tatuajes</1i>
+                        <li>Carros</1i>
+                        <li>Outfit</1i>
+                        <li>Maquillaje</1i>
+                        <li class="active">Figma</li>
+                        <li>Paisajes</1i>
+                    </ul>
+                    </li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Favoritos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">Crear</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">USUARIOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'main:addinfo' %}">Crear</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'main:login' %}">USUARIOS</a></li>
             </ul>
         </div>
     </div>
 </nav>
-
