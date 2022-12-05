@@ -35,11 +35,32 @@ Start Content
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div class="masthead-subheading">Bienvenido a Opalus</div>
+                <div class="masthead-heading text-uppercase">Nuevo Contenido Todos Los Dias</div>
             </div>
         </header>
+
+        <section class="page-section" id="services">
+            <div class="container">
+ 
+            </div>
+        </section>
+
+        <div id="carrusel-contenido">
+            <div id="carrusel-caja">
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="https://images.squarespace-cdn.com/content/v1/5e3075c42b7a45683b14cf9e/1586215663533-WCQ1JYB27RXPIZRVK4Z9/almond+honey" >
+                </div>
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="https://t3.ftcdn.net/jpg/04/37/93/46/360_F_437934660_w2oRc4mvkcyFy7wod0h3zH4RBeRbwzTj.jpg">
+                </div>
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="https://inkme.es/wp-content/uploads/2018/08/neotraditional-cover-articolo.jpg">
+                </div>
+            </div>
+        </div>
+
+
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
@@ -51,19 +72,30 @@ Start Content
     <div class="grid-container">
         {% for p in publicaciones %}
         {% if p.is_active %}
-
-        <img class="grid-item" src="https://picsum.photos/230/128.jpg" width="230" height="128" />
-        <img class="grid-item" src="https://picsum.photos/230/300.jpg" width="230" height="300" />
-        <img class="grid-item" src="https://picsum.photos/230/410.jpg" width="230" height="410" />
-        <img class="grid-item" src="https://picsum.photos/230/250.jpg" width="230" height="250" />
-        <img class="grid-item" src="https://picsum.photos/230/180.jpg" width="230" height="180" />
-        <img class="grid-item" src="https://picsum.photos/230/340.jpg" width="230" height="340" />
-        <img class="grid-item" src="https://picsum.photos/230/260.jpg" width="230" height="260" />
-            <img class="grid-item" src="{{p.image.url}}" width="230" height="300" />
-
+            <img class="grid-item" src="{{p.image.url}}"/>
         {% endif %}
       {% endfor %}
-
+<img class="grid-item" src="https://picsum.photos/230/128.jpg" width="230" height="128" />
+      <img class="grid-item" src="https://picsum.photos/230/300.jpg" width="230" height="300" />
+      <img class="grid-item" src="https://picsum.photos/230/410.jpg" width="230" height="410" />
+      <img class="grid-item" src="https://picsum.photos/230/250.jpg" width="230" height="250" />
+      <img class="grid-item" src="https://picsum.photos/230/180.jpg" width="230" height="180" />
+      <img class="grid-item" src="https://picsum.photos/230/340.jpg" width="230" height="340" />
+      <img class="grid-item" src="https://picsum.photos/230/120.jpg" width="230" height="120" />
+      <img class="grid-item" src="https://picsum.photos/230/215.jpg" width="230" height="215" />
+      <img class="grid-item" src="https://picsum.photos/230/420.jpg" width="230" height="420" />
+      <img class="grid-item" src="https://picsum.photos/230/320.jpg" width="230" height="320" />
+      <img class="grid-item" src="https://picsum.photos/230/153.jpg" width="230" height="153" />
+      <img class="grid-item" src="https://picsum.photos/230/480.jpg" width="230" height="480" />
+      <img class="grid-item" src="https://picsum.photos/230/260.jpg" width="230" height="260" />
+      <img class="grid-item" src="https://picsum.photos/230/450.jpg" width="230" height="450" />
+      <img class="grid-item" src="https://picsum.photos/230/135.jpg" width="230" height="135" />
+      <img class="grid-item" src="https://picsum.photos/230/287.jpg" width="230" height="287" />
+      <img class="grid-item" src="https://picsum.photos/230/500.jpg" width="230" height="500" />
+      <img class="grid-item" src="https://picsum.photos/230/222.jpg" width="230" height="222" />
+      <img class="grid-item" src="https://picsum.photos/230/321.jpg" width="230" height="321" />
+      <img class="grid-item" src="https://picsum.photos/230/150.jpg" width="230" height="150" />
+      <img class="grid-item" src="https://picsum.photos/230/165.jpg" width="230" height="165" />
     </div>
 </section>
 
@@ -72,46 +104,46 @@ Start Content
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Rapidos y Teclosos</h2>
+                    <h3 class="section-subheading text-muted">La programación y la familia es primero</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/1.jpg' %}" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/Jefry.jpeg' %}" alt="..." />
+                            <h4>Jefry Lezcano</h4>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/2.jpg' %}" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/Jaime.jpeg' %}" alt="..." />
+                            <h4>Jaime Gutierrez</h4>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/3.jpg' %}" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/Kristhel.jpeg' %}" alt="..." />
+                            <h4>Kristhel Valdes</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/Stephanie.jpg' %}" alt="..." />
+                            <h4>Stephanie Baules</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/Isaac.jpeg' %}" alt="..." />
+                            <h4>Isaac Candanedo</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Desarollo 3</p></div>
                 </div>
             </div>
-        </section>
+        </section>
 
 
         
@@ -185,7 +217,7 @@ Start Content
                             <div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
                             <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <a href="https://startbootstrap.com/solution/contact-forms">Gracias</a>
                         </div>
                     </div>
                     <!-- Submit error message-->

@@ -52,7 +52,6 @@ class Media(models.Model):
     def __str__(self):
         return self.name
 
-
 class Publicaciones(models.Model):
 
     class Meta:

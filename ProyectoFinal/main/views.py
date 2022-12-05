@@ -4,11 +4,7 @@ from django.contrib import messages
 
 from .forms import ContactForm, CreateUserForm, PublicacionForm
 
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponse
 from django.shortcuts import redirect
 
 from .models import (
@@ -18,6 +14,71 @@ from .models import (
 # Create your views here.
 class IndexView(generic.TemplateView):
 	template_name = "main/index.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		publicaciones = Publicaciones.objects.filter(is_active=True)
+
+		
+		context["publicaciones"] = publicaciones
+
+		return context
+
+class AnimalView(generic.TemplateView):
+	template_name = "main/Animales.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		publicaciones = Publicaciones.objects.filter(is_active=True)
+
+		
+		context["publicaciones"] = publicaciones
+
+		return context
+
+class PaisaView(generic.TemplateView):
+	template_name = "main/paisa.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		publicaciones = Publicaciones.objects.filter(is_active=True)
+
+		
+		context["publicaciones"] = publicaciones
+
+		return context
+
+class TattoView(generic.TemplateView):
+	template_name = "main/tatto.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		publicaciones = Publicaciones.objects.filter(is_active=True)
+
+		
+		context["publicaciones"] = publicaciones
+
+		return context
+
+class OutfitView(generic.TemplateView):
+	template_name = "main/outfits.html"
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		publicaciones = Publicaciones.objects.filter(is_active=True)
+
+		
+		context["publicaciones"] = publicaciones
+
+		return context
+
+class MaquiView(generic.TemplateView):
+	template_name = "main/maqui.html"
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
